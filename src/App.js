@@ -12,27 +12,29 @@ import EditProduct from './pages/EditProduct';
 import Home from './pages/Home';
 import Product_Detail from './pages/Product_Detail';
 import Cart from './pages/Cart';
+import WishList from './pages/WishList';
 
 function App() {
   return (
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Layout/>}>
-            <Route path='/' element={<Home/>}/>
-            <Route path='/blog' element={<Blog/>}/>
-            <Route path='/blog/detail/:id' element={<Blog_Detail/>}/>
-            <Route path='/account' element={<Account/>}/>
-            <Route path='/account/product/add' element={<AddProduct/>}/>
-            <Route path='/account/product/list' element={<MyProduct/>}/>
-            <Route path='/account/product/edit/:id' element={<EditProduct/>}/>
-            <Route path='/product/detail/:id' element={<Product_Detail/>}/>
-          </Route>
-          <Route element={<AuthLayout />}>
-            <Route path="/login" element={<Auth />} />
-            <Route path="/cart" element={<Cart />} />
-         </Route>
-        </Routes>
-      </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/detail/:id" element={<Blog_Detail />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="/account/product/add" element={<AddProduct />} />
+          <Route path="/account/product/list" element={<MyProduct />} />
+          <Route path="/account/product/edit/:id" element={<EditProduct />} />
+          <Route path="/product/detail/:id" element={<Product_Detail />} />
+          <Route path="/product/wishlist" element={<WishList />} />
+        </Route>
+        <Route element={<AuthLayout />}>
+          <Route path="/login" element={<Auth />} />
+          <Route path="/cart" element={<Cart />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

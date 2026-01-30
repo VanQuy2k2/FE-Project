@@ -18,7 +18,7 @@ export default function Header() {
   const cartTotal = cartRedux.reduce((sum, item) => {
     return sum + item.qty;
   }, 0);
-  console.log(cartTotal, 'cartTotal');
+
   useEffect(() => {
     dispatch(fetchCart());
   }, [dispatch]);
@@ -138,9 +138,9 @@ export default function Header() {
                       </Link>
                     </li>
                     <li>
-                      <a href="">
+                      <Link to="/product/wishlist">
                         <i className="fa fa-star"></i> Wishlist
-                      </a>
+                      </Link>
                     </li>
                     <li>
                       <Link to="/cart">

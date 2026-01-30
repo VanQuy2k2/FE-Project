@@ -8,14 +8,17 @@ import 'font-awesome/css/font-awesome.min.css';
 import { CartProvider } from './context/useCartContext';
 import { Provider } from 'react-redux';
 import store from './redux/store';
+import { WishlistProvider } from './context/useWishlistContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
     <Provider store={store}>
-      <CartProvider>
-        <App />
-      </CartProvider>
+      <WishlistProvider>
+        <CartProvider>
+          <App />
+        </CartProvider>
+      </WishlistProvider>
     </Provider>
   </>,
 );
